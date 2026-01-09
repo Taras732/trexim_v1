@@ -1,0 +1,23 @@
+<div class="animate-fade-in-up">
+    <div class="p-4 bg-gray-800/50 rounded-lg border border-white/10 relative overflow-hidden">
+        <!-- Savings Banner -->
+        <div class="absolute -right-8 top-4 rotate-45 bg-green-500 text-black font-bold text-xs py-1 px-8">
+            SAVE {{ result.percent_saved }}
+        </div>
+
+        <div class="flex flex-col gap-3">
+            <div class="flex justify-between items-end">
+                <span class="text-sm text-gray-400">Market Avg:</span>
+                <span class="text-lg text-gray-500 line-through">${{ result.market_price }}</span>
+            </div>
+            <div class="flex justify-between items-end">
+                <span class="text-sm text-white font-bold">TREXIM Price:</span>
+                <span class="text-3xl text-green-400 font-bold">${{ result.trexim_price }}</span>
+            </div>
+
+            <div class="mt-2 bg-green-500/10 rounded p-2 text-center border border-green-500/20">
+                <p class="text-sm text-green-400">Potential Savings: <strong>${{ result.savings }}</strong></p>
+            </div>
+        </div>
+    </div>
+</div>

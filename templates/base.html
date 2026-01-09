@@ -1,0 +1,42 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trexim.ai - Logistics OS</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Benzin Font would need local hosting, using Outfit/Inter as fallback or assuming local for now.
+         Plan said Benzin. I'll add a comment or style to load if available. For now using Outfit/Inter which is standard premium tech. 
+         Wait, plan says Benzin Regular and Futura. I should try to load them if possible or use similar. -->
+
+    {% tailwind_css %}
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-navy': '#050511', // Approximate based on usage
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/htmx.org@1.9.10"
+        integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+        crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-dark-navy text-white font-sans antialiased selection:bg-accent-blue selection:text-white">
+
+    {% block content %}
+    {% endblock %}
+
+</body>
+
+</html>
